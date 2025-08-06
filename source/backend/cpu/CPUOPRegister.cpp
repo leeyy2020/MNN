@@ -68,6 +68,7 @@ extern void ___CPUSetDiff1DCreator__OpType_SetDiff1D__();
 extern void ___CPUEltwiseInt8Creator__OpType_EltwiseInt8__();
 extern void ___CPUSvdCreator__OpType_Svd__();
 extern void ___CPULayerNormCreator__OpType_LayerNorm__();
+extern void ___CPUInstanceNormGradCreator__OpType_InstanceNormGrad__();
 extern void ___CPUExternalConstCreator__OpType_Const__();
 extern void ___CPUExternalConstCreator__OpType_TrainableParam__();
 
@@ -148,6 +149,7 @@ ___CPUSetDiff1DCreator__OpType_SetDiff1D__();
 ___CPUEltwiseInt8Creator__OpType_EltwiseInt8__();
 ___CPUSvdCreator__OpType_Svd__();
 ___CPULayerNormCreator__OpType_LayerNorm__();
+___CPUInstanceNormGradCreator__OpType_InstanceNormGrad__();
 ___CPUExternalConstCreator__OpType_Const__();
 ___CPUExternalConstCreator__OpType_TrainableParam__();
 #ifdef MNN_SUPPORT_RENDER

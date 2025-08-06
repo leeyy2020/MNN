@@ -186,6 +186,7 @@ enum OpType : int {
     ConvTranspose3D,
     // Use for self defined grad
     ZeroGrad,
+    InstanceNormGrad,
 
     // User define op
     Attention = 299,
