@@ -5,6 +5,8 @@ FILE(GLOB MNN_CPU_SRC ${CMAKE_CURRENT_LIST_DIR}/* ${CMAKE_CURRENT_LIST_DIR}/comp
 else()
 FILE(GLOB MNN_CPU_SRC ${CMAKE_CURRENT_LIST_DIR}/* ${CMAKE_CURRENT_LIST_DIR}/compute/*)
 endif()
+# 排除单测源文件，防止被编进库目标
+list(FILTER MNN_CPU_SRC EXCLUDE REGEX "_test\\.cpp$")
 add_library(MNNCPU OBJECT ${MNN_CPU_SRC})
 if (MNN_SUPPORT_BF16)
     include(${CMAKE_CURRENT_LIST_DIR}/bf16/CMakeLists.txt)

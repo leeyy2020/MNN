@@ -101,9 +101,9 @@ void CPUInstanceNormGrad::computeGradients(const float* input, const float* outp
                                           float* inputGrad, float* gammaGrad, float* betaGrad,
                                           int batch, int channel, int spatial) {
     
-    float* meanPtr = mTempMean.ptr<float>();
-    float* varPtr = mTempVar.ptr<float>();
-    float* normalizedPtr = mTempNormalized.ptr<float>();
+    float* meanPtr = reinterpret_cast<float*>(mTempMean.ptr());
+    float* varPtr = reinterpret_cast<float*>(mTempVar.ptr());
+    float* normalizedPtr = reinterpret_cast<float*>(mTempNormalized.ptr());
     
     // Step 1: Compute mean and variance for each instance-channel
     MNN_CONCURRENCY_BEGIN(b, batch) {
